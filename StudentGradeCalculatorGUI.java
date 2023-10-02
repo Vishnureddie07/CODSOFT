@@ -1,5 +1,3 @@
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,7 +6,6 @@ public class StudentGradeCalculatorGUI extends JFrame {
     private JTextField[] scoreFields;
     private JButton calculateButton;
     private JLabel totalMarksLabel, averagePercentageLabel, gradeLabel;
-
     public StudentGradeCalculatorGUI() {
         setTitle("Student Grade Calculator");
         setSize(400, 250);
@@ -18,7 +15,6 @@ public class StudentGradeCalculatorGUI extends JFrame {
 
         JLabel[] subjectLabels = new JLabel[5];
         scoreFields = new JTextField[5];
-
         for (int i = 0; i < 5; i++) {
             subjectLabels[i] = new JLabel("Subject " + (i + 1) + " Marks:");
             scoreFields[i] = new JTextField(10);
@@ -28,7 +24,6 @@ public class StudentGradeCalculatorGUI extends JFrame {
 
         calculateButton = new JButton("Calculate");
         add(calculateButton);
-
         totalMarksLabel = new JLabel("Total Marks: ");
         averagePercentageLabel = new JLabel("Average Percentage: ");
         gradeLabel = new JLabel("Grade: ");
@@ -49,7 +44,6 @@ public class StudentGradeCalculatorGUI extends JFrame {
         try {
             int totalMarks = 0;
             int numOfSubjects = 0;
-
             for (int i = 0; i < 5; i++) {
                 String scoreText = scoreFields[i].getText();
                 if (!scoreText.isEmpty()) {
@@ -65,9 +59,7 @@ public class StudentGradeCalculatorGUI extends JFrame {
             }
 
             double averagePercentage = (double) totalMarks / (numOfSubjects * 100) * 100;
-
             String grade = calculateGradeFromPercentage(averagePercentage);
-
             totalMarksLabel.setText("Total Marks: " + totalMarks);
             averagePercentageLabel.setText("Average Percentage: " + String.format("%.2f", averagePercentage) + "%");
             gradeLabel.setText("Grade: " + grade);
