@@ -1,6 +1,6 @@
 # CODSOFT
 
-Certainly! Here are the descriptions for each of the tasks from your point of view, reflecting that you have successfully implemented them:
+Certainly! Here are the descriptions for each of the tasks , reflecting that I have successfully implemented them:
 
 ### TASK 1: Number Game
 
