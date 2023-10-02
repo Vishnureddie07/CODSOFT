@@ -1,5 +1,3 @@
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -25,7 +23,6 @@ public class StuDetails extends JFrame {
         JLabel nameLabel = new JLabel("Name:");
         JLabel phoneNumberLabel = new JLabel("Phone Number:");
         JLabel emailAddressLabel = new JLabel("Email Address:");
-
         nameField = new JTextField();
         phoneNumberField = new JTextField();
         emailAddressField = new JTextField();
@@ -53,11 +50,9 @@ public class StuDetails extends JFrame {
         JScrollPane scrollPane = new JScrollPane(displayArea);
         displayPanel.add(scrollPane, BorderLayout.CENTER);
         displayPanel.add(displayButton, BorderLayout.SOUTH);
-
         JPanel fileOperationsPanel = new JPanel(new FlowLayout());
         fileOperationsPanel.add(saveButton);
         fileOperationsPanel.add(loadButton);
-
         JPanel exitPanel = new JPanel(new FlowLayout());
         exitPanel.add(exitButton);
 
@@ -120,7 +115,6 @@ public class StuDetails extends JFrame {
         String name = nameField.getText();
         String phoneNumber = phoneNumberField.getText();
         String emailAddress = emailAddressField.getText();
-
         if (name.isEmpty() || phoneNumber.isEmpty() || emailAddress.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please fill in all fields.", "Error", JOptionPane.ERROR_MESSAGE);
         } else if (!isValidPhoneNumber(phoneNumber) || !isValidEmailAddress(emailAddress)) {
@@ -235,14 +229,12 @@ public class StuDetails extends JFrame {
             }
         });
     }
-
 }
 
 class Contact {
     private String name;
     private String phoneNumber;
     private String emailAddress;
-
     public Contact(String name, String phoneNumber, String emailAddress) {
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -281,7 +273,6 @@ class Contact {
 
 class AddressBook {
     private List<Contact> contacts;
-
     public AddressBook() {
         contacts = new ArrayList<>();
     }
