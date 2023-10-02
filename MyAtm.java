@@ -1,5 +1,3 @@
-
-
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -8,7 +6,6 @@ import java.awt.event.ActionListener;
 public class MyAtm extends JFrame {
     private BankAccount bankAccount;
     private JTextField balanceTextField;
-
     public MyAtm() {
         setTitle("My ATM Machine");
         setSize(400, 200);
@@ -16,11 +13,9 @@ public class MyAtm extends JFrame {
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(4, 2));
-
         JLabel balanceLabel = new JLabel("Balance:");
         balanceTextField = new JTextField();
         balanceTextField.setEditable(false);
-
         JLabel actionLabel = new JLabel("Select Your Action:");
 
         JButton checkBalanceButton = new JButton("Check Balance");
@@ -34,9 +29,7 @@ public class MyAtm extends JFrame {
         panel.add(checkBalanceButton);
         panel.add(depositButton);
         panel.add(withdrawButton);
-
         add(panel);
-
         bankAccount = new BankAccount(0.0); 
         updateBalanceTextField();
 
@@ -46,7 +39,7 @@ public class MyAtm extends JFrame {
                 checkBalance();
             }
         });
-
+        
         depositButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -127,7 +120,6 @@ public class MyAtm extends JFrame {
 
 class BankAccount {
     private double balance;
-
     public BankAccount(double initialBalance) {
         this.balance = initialBalance;
     }
