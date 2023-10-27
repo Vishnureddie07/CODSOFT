@@ -10,15 +10,12 @@ public class WordCountGUI {
     private Map<String, Integer> wordFrequency;
 
     public WordCountGUI() {
-        // Initialize wordFrequency map
         wordFrequency = new HashMap<>();
 
-        // Create the main frame
         JFrame frame = new JFrame("This is a Word Count Program");
         frame.setSize(600, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Create a panel for user input
         JPanel inputPanel = new JPanel(new FlowLayout());
         JLabel inputLabel = new JLabel("Pick an option:");
         JButton manualInputButton = new JButton("Enter the text manually");
@@ -27,7 +24,6 @@ public class WordCountGUI {
         inputPanel.add(manualInputButton);
         inputPanel.add(fileInputButton);
 
-        // Create a panel for displaying word count results
         JPanel resultPanel = new JPanel(new BorderLayout());
         textArea = new JTextArea(15, 40);
         textArea.setWrapStyleWord(true);
@@ -35,18 +31,14 @@ public class WordCountGUI {
         JScrollPane scrollPane = new JScrollPane(textArea);
         resultPanel.add(scrollPane, BorderLayout.CENTER);
 
-        // Create a status label
         statusLabel = new JLabel("", SwingConstants.CENTER);
         resultPanel.add(statusLabel, BorderLayout.SOUTH);
 
-        // Add panels to the frame
         frame.add(inputPanel, BorderLayout.NORTH);
         frame.add(resultPanel, BorderLayout.CENTER);
 
-        // Display the frame
         frame.setVisible(true);
 
-        // Add action listeners to buttons
         manualInputButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -80,26 +72,22 @@ public class WordCountGUI {
     }
 
     private void countWords(String inputText) {
-        String[] words = inputText.split("[\\s.,!?;]+"); // Split by spaces and punctuation
+        String[] words = inputText.split("[\\s.,!?;]+"); 
         int totalWordCount = words.length;
 
-        // Clear previous word frequency data
         wordFrequency.clear();
 
-        // Define common stop words to be ignored
         String[] stopWords = { "the", "and", "is", "in", "on", "it", "with", "of", "for" };
 
         for (String word : words) {
-            word = word.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+            word = word.toLowerCase(); 
             if (!Arrays.asList(stopWords).contains(word)) {
                 wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
             }
         }
 
-        // Update the status label with word count statistics
         statusLabel.setText("Total no.of Words: " + totalWordCount + " | Unique no.of Words: " + wordFrequency.size());
 
-        // Display word frequency statistics
         StringBuilder frequencyText = new StringBuilder("\nWord Frequency:\n");
         for (Map.Entry<String, Integer> entry : wordFrequency.entrySet()) {
             frequencyText.append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
