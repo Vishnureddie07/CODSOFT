@@ -17,7 +17,7 @@ I've also gone the extra mile by adding some additional features:
 - I've included the option for multiple rounds, allowing the user to enjoy the game repeatedly.
 - Users can now see their score, which is based on either the number of attempts taken or rounds won.
 
-### TASK 2: Student Grade Calculator
+### TASK 3: Student Management System
 
 In this task, I've developed a program that calculates and displays the grades of students based on their exam scores. The program offers the following capabilities:
 
@@ -27,7 +27,7 @@ In this task, I've developed a program that calculates and displays the grades o
 4. Based on the average percentage achieved, the program assigns grades to students.
 5. The results are then displayed, showing the total marks, average percentage, and corresponding grade.
 
-### TASK 3: ATM Interface
+### TASK 4: ATM Interface
 
 In this task, I've designed and implemented a user-friendly ATM (Automated Teller Machine) interface. The program offers a range of functions:
 
@@ -39,7 +39,7 @@ In this task, I've designed and implemented a user-friendly ATM (Automated Telle
 6. I've taken care of input validation, ensuring that user input is within acceptable limits (e.g., sufficient balance for withdrawals).
 7. Users receive clear and informative messages based on their chosen options and the outcome of their transactions.
 
-### TASK 5: Student Management System
+### TASK 5: Address Book System
 
 In this task, I've developed a comprehensive Student Management System, simplifying the management of student data. The program covers various aspects:
 
