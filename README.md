@@ -17,6 +17,18 @@ I've also gone the extra mile by adding some additional features:
 - I've included the option for multiple rounds, allowing the user to enjoy the game repeatedly.
 - Users can now see their score, which is based on either the number of attempts taken or rounds won.
 
+### TASK 2: Word Counter
+
+This project is a user-friendly word counting application designed for effortless text analysis. Users can input text or upload a file, and the application provides a graphical user interface (GUI) to enhance the overall experience.
+
+The primary functionality is word counting, but this application goes a step further by filtering out common words (stop words) to ensure precise results. Users can expect to see the total word count, making it easy to grasp the document's length.
+
+In addition to word counting, the application offers valuable insights into the text. Users can access statistics on unique words and the frequency of each word, enabling a more in-depth analysis of the provided content.
+
+To ensure a smooth user experience, input validation has been integrated, which handles potential issues like empty inputs or file errors.
+
+In summary, this project empowers users to efficiently count words in text, gain deeper insights into content, and do so through a user-friendly GUI, ensuring a seamless and informative experience.
+
 ### TASK 3: Student Management System
 
 In this task, I've developed a program that calculates and displays the grades of students based on their exam scores. The program offers the following capabilities:
